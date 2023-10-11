@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const router = require("./routes/auth");
 const express = require("express");
 
@@ -15,3 +17,9 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("Server is Running on port : ", port);
 });
+
+// const json = JSON.parse(process.env.FIREBASE);
+// console.log(json.private_key);
+
+// const serviceAccount = require("./service.json");
+// console.log(serviceAccount);

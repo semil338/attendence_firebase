@@ -3,9 +3,9 @@ const express = require("express");
 
 const router = express.Router();
 
-const serviceAccount = require("../service.json");
+// const serviceAccount = require("../service.json");
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(JSON.parse(process.env.FIREBASE)),
 });
 
 router.get("/:id", (req, res) => {
