@@ -8,6 +8,10 @@ app.use(express.json());
 
 app.use("/api/", router);
 
+app.get("/", (req, res) => {
+  res.send("GET request to the homepage");
+});
+
 app.listen(port, () => {
   console.log("Server is Running on port : ", port);
 });
